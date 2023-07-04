@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+	
+	<link rel="stylesheet" href="CSS/Main.css">
+</head>
+
+<body>
+	
+	<div id="wrapper">
+		<div id="header">
+			<a href="" class="logo">
+				<img src="IMG/logo.png" alt="">
+			</a>
+			
+			<div class="menu">
+				<div class="item">
+					<a href="">Home</a>
+				</div>
+				<div class="item">
+					<a href="">About us</a>
+				</div>
+				<div class="item">
+					<a href="">Chef</a>
+				</div>
+				<div class="item">
+					<a href="">Menu</a>
+				</div>
+				<div class="item">
+					<a href="">Gallery</a>
+				</div>
+				<div class="item">
+					<a href="">Contact</a>
+				</div>
+			</div>
+		</div>
+		
+		<div class="slider">
+		<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="IMG/photo-1615937657715-bc7b4b7962c1.avif" style="width:100%">
+  <div class="text">Caption Text</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="IMG/photo-1550547660-d9450f859349.avif" style="width:100%">
+  <div class="text">Caption Two</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="IMG/photo-1615937657715-bc7b4b7962c1.avif" style="width:100%">
+  <div class="text">Caption Three</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+		
+		
+		</div>
+	
+	
+	
+	
+	
+	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+	
+</body>
+</html>
